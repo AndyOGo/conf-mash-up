@@ -7,19 +7,24 @@ var confLoader = require('./lib/confLoader');
 function mashConf(options, done) {
     var opts = Object.assign(defaultOptions, options);
 
-    confLoader.load(opts, function (err, config) {
+    confLoader.load(opts, function (err, configs) {
         if(err) {
             return done(err);
         }
 
-        done(null, config);
+        console.log(configs);
+
+        done(null, configs);
     });
 }
 
 function mashConfSync(options) {
     var opts = Object.assign(defaultOptions, options);
+    var configs = confLoader.loadSync(opts);
 
-    return confLoader.loadSync(opts);
+    console.log(configs);
+
+    return configs;
 }
 
 module.exports = {
