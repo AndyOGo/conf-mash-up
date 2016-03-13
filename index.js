@@ -5,7 +5,9 @@ var defaultOptions = {
 var confLoader = require('./lib/confLoader');
 
 function mashConf(options, done) {
-    confLoader.load(options, function (err, config) {
+    var opts = Object.assign(defaultOptions, options);
+
+    confLoader.load(opts, function (err, config) {
         if(err) {
             return done(err);
         }
@@ -15,7 +17,9 @@ function mashConf(options, done) {
 }
 
 function mashConfSync(options) {
-    confLoader.loadSync(options);
+    var opts = Object.assign(defaultOptions, options);
+
+    return confLoader.loadSync(opts);
 }
 
 module.exports = {
