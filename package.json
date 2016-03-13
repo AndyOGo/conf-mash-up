@@ -8,6 +8,10 @@
   },
   "author": "Andreas Deuschlinger",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AndyOGo/conf-mash-up.git"
+  },
   "dependencies": {
     "chalk": "^1.1.1",
     "glob": "^7.0.3",
