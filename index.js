@@ -1,4 +1,5 @@
 var defaultOptions = {
+    packageJSON: '/package.json',
     mergeDefaultConfig: true,
     verbose: false
 };
