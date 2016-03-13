@@ -1,5 +1,6 @@
 var defaultOptions = {
-    mergeDefaultConfig: true
+    mergeDefaultConfig: true,
+    verbose: false
 };
 var confLoader = require('./lib/confLoader');
 
