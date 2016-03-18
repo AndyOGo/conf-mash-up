@@ -13,8 +13,6 @@ function mashConf(options, done) {
             return done(err);
         }
 
-        console.log(configs);
-
         done(null, configs);
     });
 }
@@ -22,8 +20,6 @@ function mashConf(options, done) {
 function mashConfSync(options) {
     var opts = Object.assign(defaultOptions, options);
     var configs = confLoader.loadSync(opts);
-
-    console.log(configs);
 
     return configs;
 }
